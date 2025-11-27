@@ -34,15 +34,44 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Define Inputs/Outputs: Inputs: J (Set), K (Reset), c1k (clock); Outputs: q, qbar (~q).
+2.Initialization: Set q = 0 and qbar = 1 at the start of the simulation.
+3.JK Flip-Flop Logic: On posedge c1k, compute q
+4.Complementary Output: Update qbar = ~q to maintain complementarity.
+5.Testbench: Simulate with combinations of J, K, and c1k to verify JK Flip-Flop functionality
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+```
+module exp5(j,k,clk,q,qbar);
+input j,k,clk;
+output reg q,qbar;
+initial 
+begin
+q=1'b0;
+q=1'b1;
+end 
+
+always @(posedge clk)
+begin 
+q<=(j&~q)|(~k&q);
+qbar<=~q;
+end
+endmodule
+```
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+
+<img width="1920" height="1080" alt="exp5 rtl" src="https://github.com/user-attachments/assets/f2e46e9a-6e4b-4dd9-9a91-f93a8f43b3f7" />
+
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+
+<img width="1920" height="1080" alt="exp5 wave" src="https://github.com/user-attachments/assets/89a4402e-a9e7-400d-ac22-d7f3cd12b1de" />
+
+
 **RESULTS**
+
+Thus the JK flipflop is implemented and verified
