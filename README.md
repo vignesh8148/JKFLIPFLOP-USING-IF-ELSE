@@ -62,8 +62,14 @@ endmodule
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+![WhatsApp Image 2025-11-27 at 8 51 08 AM](https://github.com/user-attachments/assets/ea53ab65-c8fe-4fe4-aec2-4f435d0021cc)
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+![WhatsApp Image 2025-11-27 at 8 51 08 AM](https://github.com/user-attachments/assets/33f2b3dc-e775-49b2-acfa-aa80749322b0)
+
+
 **RESULTS**
+
+Thus the JK flipflop is implemented and verified
